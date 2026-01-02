@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #D4AF37;
+  --gold-hover: #B8962E;
+  --black: #0F0F0F;
+  --charcoal: #1A1A1A;
+  --dark-gray: #2A2A2A;
+  --text-primary: #F5F5F5;
+  --text-secondary: #A1A1A1;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-gray-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .gold-text {
+    @apply text-[#D4AF37];
+  }
+
+  .gold-accent {
+    @apply border-[#D4AF37] bg-[#D4AF37];
+  }
+
+  .gold-hover {
+    @apply hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors duration-300;
+  }
+
+  .btn-gold {
+    @apply bg-[#D4AF37] text-black px-6 py-3 rounded font-bold hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-gold-outline {
+    @apply border-2 border-[#D4AF37] text-[#D4AF37] px-6 py-3 rounded font-bold hover:bg-[#D4AF37] hover:text-black transition-all duration-300;
+  }
+
+  .hero-btn-primary {
+    @apply bg-[#D4AF37] text-[#0F0F0F] px-8 py-4 rounded-md font-bold text-base sm:text-lg tracking-wide transition-all duration-300 hover:bg-[#B8962E] transform hover:scale-[1.02];
+  }
+
+  .hero-btn-secondary {
+    @apply bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] px-8 py-4 rounded-md font-bold text-base sm:text-lg tracking-wide transition-all duration-300 hover:bg-[#D4AF37] hover:text-[#0F0F0F];
+  }
+}

@@ -1,0 +1,9 @@
+services:
+  meme-agent:
+    build: .
+    container_name: meme-coin-trading-agent
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
